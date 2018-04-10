@@ -1,0 +1,21 @@
+c:\users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll.config
+c:\users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll
+c:\users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\x64\SDL2.dll
+c:\users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll
+c:\users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\x64\soft_oal.dll
+c:\users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\x86\libSDL2-2.0.so.0
+c:\users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\x64\libSDL2-2.0.so.0
+c:\users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\x86\libopenal.so.1
+c:\users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\x64\libopenal.so.1
+c:\users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\libSDL2-2.0.0.dylib
+c:\users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\libopenal.1.dylib
+c:\users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Kevin spicy GAME.exe
+c:\users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Kevin spicy GAME.pdb
+c:\users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
+c:\users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\obj\Debug\Kevin spicy GAME.csprojResolveAssemblyReference.cache
+c:\users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\obj\Debug\Kevin spicy GAME.exe
+c:\users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\obj\Debug\Kevin spicy GAME.pdb
+c:\users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\Bullet.xnb
+C:\Users\noah.lundqvist\Documents\Visual Studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\KEVINspace.xnb
+C:\Users\noah.lundqvist\Documents\Visual Studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\EnemyShip.xnb
+C:\Users\noah.lundqvist\documents\visual studio 2017\Projects\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\KEvinsShip.xnb
