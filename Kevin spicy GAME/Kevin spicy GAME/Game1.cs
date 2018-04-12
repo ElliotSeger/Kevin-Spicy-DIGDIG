@@ -7,6 +7,7 @@ namespace Kevin_spicy_GAME
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
+    /// // hahahaa
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
