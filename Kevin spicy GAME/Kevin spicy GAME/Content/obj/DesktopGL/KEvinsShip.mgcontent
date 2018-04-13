@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/noah.lundqvist/documents/visual studio 2017/Projects/Kevin spicy GAME/Kevin spicy GAME/Content/KEvinsShip.png</SourceFile>
-  <SourceTime>2018-04-10T11:29:19.0922869+02:00</SourceTime>
-  <DestFile>C:/Users/noah.lundqvist/documents/visual studio 2017/Projects/Kevin spicy GAME/Kevin spicy GAME/Content/bin/DesktopGL/KEvinsShip.xnb</DestFile>
-  <DestTime>2018-04-10T11:29:52.2317912+02:00</DestTime>
+  <SourceFile>C:/Users/elliot.seger/Documents/GitHub/Kevin-Spicy/Kevin spicy GAME/Kevin spicy GAME/Content/KEvinsShip.png</SourceFile>
+  <SourceTime>2018-04-12T08:20:40.0222246+02:00</SourceTime>
+  <DestFile>C:/Users/elliot.seger/Documents/GitHub/Kevin-Spicy/Kevin spicy GAME/Kevin spicy GAME/Content/bin/DesktopGL/KEvinsShip.xnb</DestFile>
+  <DestTime>2018-04-13T09:44:09.2506063+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
