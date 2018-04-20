@@ -14,35 +14,36 @@ namespace Kevin_spicy_GAME
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         
-        Texture2D _texure;
+        public Texture2D _texure { get; set; }
         Texture2D _textureSpace;
-        Texture2D _textureEnem;
-        Texture2D _textureShip;
         Vector2 _position;
         Vector2 _scale;
         Vector2 _offset;
-        Rectangle rectangle;
+        Rectangle _rectangle;
+
+        public Rectangle EnemyRectangle
+        {
+            get { return _rectangle; }
+        }
         float theEnemySpeed;
         float speed;
         Color color;
        
         public Enemy(Texture2D texture, Vector2 startPosition, float theEnemySpeed, Vector2 enemyScale)
         {
-            texture = _textureEnem;
             _position = startPosition;
-            _offset = _textureEnem.Bounds.Size.ToVector2() * 0.5f;
+            _offset = Game1.LoadedTextures["EnemyShip"].Bounds.Size.ToVector2() * 0.5f;
             _scale = enemyScale;
-            rectangle = new Rectangle((startPosition - _offset).ToPoint(), (_textureEnem.Bounds.Size.ToVector2() * _scale).ToPoint());
+            _rectangle = new Rectangle((startPosition - _offset).ToPoint(), (Game1.LoadedTextures["EnemyShip"].Bounds.Size.ToVector2() * _scale).ToPoint());
+            _rectangle.Size = new Point(100);
             color = Color.White;
             speed = theEnemySpeed;
         }
 
-        public void Update(float deltaTime, Vector2 _position)
+        public void Update(GameTime gameTime)
         {
-
-            spriteBatch.Draw(_textureEnem, _position, Color.White);
-
+            _position += new Vector2(1, 0);
+            _rectangle.Location = _position.ToPoint();
         }
-
     }
 }

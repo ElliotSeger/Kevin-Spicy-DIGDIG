@@ -12,12 +12,16 @@ namespace Kevin_spicy_GAME
     /// </summary>
     public class Game1 : Game
     {
+        static Dictionary<string, Texture2D> loadedTextures = new Dictionary<string, Texture2D>();
+
+        public static Dictionary<string, Texture2D> LoadedTextures
+        {
+            get { return loadedTextures; }
+        }
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
-        Texture2D kevinSpaceshipTexture;
-        Texture2D bulletTexture;
-
+        
         Player player;
 
         //Game World
@@ -48,8 +52,8 @@ namespace Kevin_spicy_GAME
 
 
             base.Initialize();
-
-            player = new Player(kevinSpaceshipTexture, bulletTexture);
+            EnemySpawn.SpawnEnemy(Window);
+            player = new Player();
 
             IsMouseVisible = true;
 
@@ -66,9 +70,14 @@ namespace Kevin_spicy_GAME
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            kevinSpaceshipTexture = Content.Load<Texture2D>("KEvinsShip");
+            loadedTextures["EnemyShip"] = Content.Load<Texture2D>("EnemyShip");
 
-            bulletTexture = Content.Load<Texture2D>("bullet");
+            loadedTextures["Ship"] = Content.Load<Texture2D>("KEvinsShip");
+
+            loadedTextures["Bullet"] = Content.Load<Texture2D>("bullet");
+
+
+
 
             // pointTexture = Content.Load<Texture2D>("point");
             // TODO: use this.Content to load your game content here
@@ -101,6 +110,11 @@ namespace Kevin_spicy_GAME
                 bullet.Update(gameTime);
             }
 
+            foreach(Enemy e in EnemySpawn.SpawnedEnemies)
+            {
+                e.Update(gameTime);
+            }
+
             base.Update(gameTime);
         }
 
@@ -125,6 +139,7 @@ namespace Kevin_spicy_GAME
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
+            EnemySpawn.Draw(spriteBatch);
             player.Draw(spriteBatch);
             foreach (Bullet bullet in bullets)
             {

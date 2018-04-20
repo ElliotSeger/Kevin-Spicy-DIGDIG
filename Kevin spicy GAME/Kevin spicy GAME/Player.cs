@@ -18,10 +18,16 @@ namespace Kevin_spicy_GAME
         float attackSpeed;
         float rotation;
         Texture2D bulletGreenTexture;
+        private Texture2D texture2D;
+        private Vector2 vector21;
+        private int v1;
+        private Vector2 vector22;
+        private int v2;
+        private Color white;
 
-        public Player(Texture2D texture, Texture2D bulletTexture)
+        public Player()
         {
-            kevinSpaceshipTexture = texture;
+            kevinSpaceshipTexture = Game1.LoadedTextures["Ship"];
             position = new Vector2(0, 200);
             speed = 300;
             attackInterval = 0.2f;
@@ -31,11 +37,22 @@ namespace Kevin_spicy_GAME
             spaceshipColor = Color.White;
             offset = (kevinSpaceshipTexture.Bounds.Size.ToVector2() * 0.5f) * scale;
             spaceshipRectangle = new Rectangle((position - offset).ToPoint(), (kevinSpaceshipTexture.Bounds.Size.ToVector2() * scale).ToPoint());
-            bulletGreenTexture = bulletTexture;
+            bulletGreenTexture = Game1.LoadedTextures["Bullet"];
+        }
+
+        public Player(Texture2D texture2D, Vector2 vector21, int v1, Vector2 vector22, int v2, Color white)
+        {
+            this.texture2D = texture2D;
+            this.vector21 = vector21;
+            this.v1 = v1;
+            this.vector22 = vector22;
+            this.v2 = v2;
+            this.white = white;
         }
 
         public void Update(GameTime gameTime, GameWindow window)
         {
+
             float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
             attackSpeed += deltaTime;
             KeyboardState keyboardState = Keyboard.GetState();
