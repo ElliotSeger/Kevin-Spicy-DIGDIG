@@ -13,7 +13,7 @@ namespace Kevin_spicy_GAME
         float bulletSpeed;
         Vector2 position;
         Vector2 direction = new Vector2(1, 0);
-        Texture2D bulletGreenTexture;
+        Texture2D redBullet;
         Rectangle collisionBoxBullet;
         Vector2 bulletOffset;
         Vector2 bulletScale;
@@ -21,7 +21,7 @@ namespace Kevin_spicy_GAME
         public Bullet(Vector2 pos, Texture2D texture, float speed, Vector2 scale, Vector2 playerScale)
         {
             position = pos + playerScale * 0.26f;
-            bulletGreenTexture = texture;
+            redBullet = texture;
             bulletSpeed = speed;
             bulletScale = scale;
             collisionBoxBullet = new Rectangle(position.ToPoint(), bulletScale.ToPoint());
@@ -36,7 +36,7 @@ namespace Kevin_spicy_GAME
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(bulletGreenTexture, position, null, Color.White, 0, bulletOffset, bulletScale , SpriteEffects.None, 0);
+            spriteBatch.Draw(redBullet, position, null, Color.White, 0, bulletOffset, bulletScale , SpriteEffects.None, 0);
         }
     }
 }

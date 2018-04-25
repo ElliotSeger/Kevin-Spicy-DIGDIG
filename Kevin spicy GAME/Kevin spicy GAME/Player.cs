@@ -66,7 +66,7 @@ namespace Kevin_spicy_GAME
             }
             if (keyboardState.IsKeyDown(Keys.A))
             {
-                position += (-Vector2.UnitX * speed * deltaTime);
+                position += (-Vector2.UnitX * speed * deltaTime * 2);
             }
             if (keyboardState.IsKeyDown(Keys.S))
             {
@@ -74,7 +74,7 @@ namespace Kevin_spicy_GAME
             }
             if (keyboardState.IsKeyDown(Keys.W))
             {
-                position += (-Vector2.UnitY * speed * deltaTime);
+                position += (-Vector2.UnitY * speed * deltaTime * 2);
             }
 
             if (position.X <= 40)
