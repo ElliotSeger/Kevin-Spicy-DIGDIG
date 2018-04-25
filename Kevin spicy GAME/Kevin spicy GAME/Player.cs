@@ -28,12 +28,12 @@ namespace Kevin_spicy_GAME
         public Player()
         {
             kevinSpaceshipTexture = Game1.LoadedTextures["Ship"];
-            position = new Vector2(0, 200);
+            position = new Vector2(0, 450);
             speed = 300;
             attackInterval = 0.2f;
             rotation = 0;
-            scale = new Vector2(0.5f, 0.5f);
-            attackSpeed = 0;
+            scale = new Vector2(0.3f, 0.3f);
+            attackSpeed = 100;
             spaceshipColor = Color.White;
             offset = (kevinSpaceshipTexture.Bounds.Size.ToVector2() * 0.5f) * scale;
             spaceshipRectangle = new Rectangle((position - offset).ToPoint(), (kevinSpaceshipTexture.Bounds.Size.ToVector2() * scale).ToPoint());
@@ -60,30 +60,34 @@ namespace Kevin_spicy_GAME
             {
                 position += (Vector2.UnitX * speed * deltaTime);
             }
+            if (keyboardState.IsKeyDown(Keys.LeftShift))
+            {
+                position += (Vector2.UnitX * speed * deltaTime * 3);
+            }
             if (keyboardState.IsKeyDown(Keys.A))
             {
                 position += (-Vector2.UnitX * speed * deltaTime);
             }
             if (keyboardState.IsKeyDown(Keys.S))
             {
-                position += (Vector2.UnitY * speed * deltaTime);
+                position += (Vector2.UnitY * speed * deltaTime * 2);
             }
             if (keyboardState.IsKeyDown(Keys.W))
             {
                 position += (-Vector2.UnitY * speed * deltaTime);
             }
 
-            if (position.X <= 0)
+            if (position.X <= 40)
             {
-                position.X = 0;
+                position.X = 40;
             }
             if (position.X >= (window.ClientBounds.Width - (kevinSpaceshipTexture.Width * scale.X)))
             {
                 position.X = (window.ClientBounds.Width - kevinSpaceshipTexture.Width * scale.X);
             }
-            if (position.Y <= 0)
+            if (position.Y <= 10)
             {
-                position.Y = 0;
+                position.Y = 10;
             }
             if (position.Y >= (window.ClientBounds.Height - kevinSpaceshipTexture.Height * scale.Y))
             {
@@ -109,7 +113,7 @@ namespace Kevin_spicy_GAME
 
         public void Shoot()
         {
-            Game1.bullets.Add(new Bullet(position, bulletGreenTexture, 20, Vector2.One * 0.01f, spaceshipRectangle.Size.ToVector2() + new Vector2()));
+            Game1.bullets.Add(new Bullet(position, bulletGreenTexture, 20, Vector2.One * 0.025f, spaceshipRectangle.Size.ToVector2() + new Vector2()));
         }
     }
 }

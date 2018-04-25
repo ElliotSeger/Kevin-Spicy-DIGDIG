@@ -28,15 +28,18 @@ namespace Kevin_spicy_GAME
         {
             random = new Random();
             enemies = new List<Enemy>();
-            numEnemies = 10;
+            numEnemies = 50;
 
-            player = new Player(Game1.LoadedTextures["Ship"], new Vector2(100, 50), 300, new Vector2(1, 1), 0, Color.White);
+            player = new Player(Game1.LoadedTextures["Ship"], new Vector2(700, 100), 800, new Vector2(10, 100), 0, Color.White);
 
             for (int i = 0; i < numEnemies; i++)
             {
                 float randomX = random.Next(Window.ClientBounds.Height);
                 float randomY = random.Next(Window.ClientBounds.Width);
-                enemies.Add(new Enemy(Game1.LoadedTextures["EnemyShip"], new Vector2(randomX, randomY), 300, Vector2.One));
+                enemies.Add(new Enemy(Game1.LoadedTextures["EnemyShip"], new Vector2(randomX, randomY), 100, Vector2.One));
+            }
+           // if 
+            {
 
             }
         }

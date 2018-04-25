@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Kevin_spicy_GAME
 {
@@ -12,6 +13,9 @@ namespace Kevin_spicy_GAME
     /// </summary>
     public class Game1 : Game
     {
+        
+        Vector2 bgPosition = new Vector2(0, 0);
+
         static Dictionary<string, Texture2D> loadedTextures = new Dictionary<string, Texture2D>();
 
         public static Dictionary<string, Texture2D> LoadedTextures
@@ -36,7 +40,9 @@ namespace Kevin_spicy_GAME
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
-            // graphics.ToggleFullScreen();
+            graphics.IsFullScreen = false;
+            graphics.PreferredBackBufferHeight = 1080;
+            graphics.PreferredBackBufferWidth = 1920;
             Content.RootDirectory = "Content";
         }
 
@@ -50,15 +56,13 @@ namespace Kevin_spicy_GAME
         {
             // TODO: Add your initialization logic here
 
-
+            
             base.Initialize();
+
             EnemySpawn.SpawnEnemy(Window);
             player = new Player();
 
             IsMouseVisible = true;
-
-            // Window.ClientBounds.Width
-
         }
 
         /// <summary>
@@ -70,11 +74,17 @@ namespace Kevin_spicy_GAME
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            loadedTextures["SpaceWallpaper"] = Content.Load<Texture2D>("SpaceWallpaper");
+
             loadedTextures["EnemyShip"] = Content.Load<Texture2D>("EnemyShip");
 
-            loadedTextures["Ship"] = Content.Load<Texture2D>("KEvinsShip");
+            loadedTextures["Ship"] = Content.Load<Texture2D>("KEvins Ship");
 
             loadedTextures["Bullet"] = Content.Load<Texture2D>("bullet");
+
+            loadedTextures["Crosshair"] = Content.Load<Texture2D>("crosshair");
+
+            
 
 
 
@@ -101,6 +111,15 @@ namespace Kevin_spicy_GAME
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            if (bgPosition.X > -11515)
+            {
+                bgPosition += new Vector2(-25, 0);
+            }
+            else
+            {
+                bgPosition = new Vector2(0, 0);
+            }
+
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
@@ -139,11 +158,13 @@ namespace Kevin_spicy_GAME
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
+            spriteBatch.Draw(LoadedTextures["SpaceWallpaper"], bgPosition, Color.White);
             EnemySpawn.Draw(spriteBatch);
             player.Draw(spriteBatch);
             foreach (Bullet bullet in bullets)
             {
                 bullet.Draw(spriteBatch);
+               // crosshair.draw(spriteBatch);
             }
             spriteBatch.End();
 

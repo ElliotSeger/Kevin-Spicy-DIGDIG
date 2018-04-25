@@ -42,7 +42,7 @@ namespace Kevin_spicy_GAME
 
         public void Update(GameTime gameTime)
         {
-            _position += new Vector2(1, 0);
+            _position += new Vector2(-1, 0);
             _rectangle.Location = _position.ToPoint();
         }
     }

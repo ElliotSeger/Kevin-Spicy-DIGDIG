@@ -40,3 +40,26 @@ C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy 
 C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Kevin spicy GAME.exe
 C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Kevin spicy GAME.pdb
 C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\x64\SDL2.dll
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\x64\soft_oal.dll
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\x86\libSDL2-2.0.so.0
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\x64\libSDL2-2.0.so.0
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\x86\libopenal.so.1
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\x64\libopenal.so.1
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\libSDL2-2.0.0.dylib
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\libopenal.1.dylib
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll.config
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\Bullet.xnb
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\EnemyShip.xnb
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\KEVINspace.xnb
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Kevin spicy GAME.exe
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Kevin spicy GAME.pdb
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\obj\Debug\Kevin spicy GAME.csprojResolveAssemblyReference.cache
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\obj\Debug\Kevin spicy GAME.exe
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\obj\Debug\Kevin spicy GAME.pdb
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\SpaceWallpaper.xnb
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\KEvins ship.xnb
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\crosshair.xnb
