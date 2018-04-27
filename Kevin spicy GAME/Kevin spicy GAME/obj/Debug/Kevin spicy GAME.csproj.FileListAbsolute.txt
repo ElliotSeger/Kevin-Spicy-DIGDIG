@@ -63,3 +63,4 @@ C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kev
 C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\SpaceWallpaper.xnb
 C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\KEvins ship.xnb
 C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\crosshair.xnb
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\BulletGreen.xnb

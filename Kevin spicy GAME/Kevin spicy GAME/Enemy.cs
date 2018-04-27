@@ -11,11 +11,11 @@ namespace Kevin_spicy_GAME
 {
     class Enemy
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
-        
+        Texture2D bulletGreenTexture;
+        float attackTimer = 0;
+        float attackSpeed = 2;
+
         public Texture2D _texure { get; set; }
-        Texture2D _textureSpace;
         Vector2 _position;
         Vector2 _scale;
         Vector2 _offset;
@@ -25,7 +25,6 @@ namespace Kevin_spicy_GAME
         {
             get { return _rectangle; }
         }
-        float theEnemySpeed;
         float speed;
         Color color;
        
@@ -38,12 +37,26 @@ namespace Kevin_spicy_GAME
             _rectangle.Size = new Point(100);
             color = Color.White;
             speed = theEnemySpeed;
+            bulletGreenTexture = Game1.LoadedTextures["BulletGreen"];
         }
 
         public void Update(GameTime gameTime)
         {
-            _position += new Vector2(-1, 0);
+            attackTimer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            if(attackTimer <= 0)
+            {
+                Shoot();
+                attackTimer = attackSpeed;
+            }
+
+            _position += new Vector2(-1, 0) * speed;
             _rectangle.Location = _position.ToPoint();
+        }
+
+        public void Shoot()
+        {
+            Game1.bullets.Add(new Bullet(_position, bulletGreenTexture, 20, Vector2.One * 0.025f, _rectangle.Size.ToVector2(), -Vector2.UnitX));
         }
     }
 }

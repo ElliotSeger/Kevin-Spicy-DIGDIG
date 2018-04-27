@@ -11,13 +11,11 @@ namespace Kevin_spicy_GAME
 {
     class EnemySpawn
     {
-        static GraphicsDeviceManager graphics;
-        static SpriteBatch spriteBatch;
         static Player player;
-        static Random random;
+        static Random random = new Random();
 
         static int numEnemies;
-        static List<Enemy> enemies;
+        static List<Enemy> enemies = new List<Enemy>();
 
         public static List<Enemy> SpawnedEnemies
         {
@@ -26,22 +24,8 @@ namespace Kevin_spicy_GAME
 
         public static void SpawnEnemy(GameWindow Window)
         {
-            random = new Random();
-            enemies = new List<Enemy>();
-            numEnemies = 50;
-
-            player = new Player(Game1.LoadedTextures["Ship"], new Vector2(700, 100), 800, new Vector2(10, 100), 0, Color.White);
-
-            for (int i = 0; i < numEnemies; i++)
-            {
-                float randomX = random.Next(Window.ClientBounds.Height);
-                float randomY = random.Next(Window.ClientBounds.Width);
-                enemies.Add(new Enemy(Game1.LoadedTextures["EnemyShip"], new Vector2(randomX, randomY), 100, Vector2.One));
-            }
-           // if 
-            {
-
-            }
+            float randomY = random.Next(0, Window.ClientBounds.Height - 20);
+            enemies.Add(new Enemy(Game1.LoadedTextures["EnemyShip"], new Vector2(1900, randomY), 5, Vector2.One));
         }
 
         public static void Draw(SpriteBatch spriteBatch)

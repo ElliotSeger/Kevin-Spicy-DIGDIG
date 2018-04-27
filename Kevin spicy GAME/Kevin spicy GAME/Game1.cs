@@ -13,7 +13,8 @@ namespace Kevin_spicy_GAME
     /// </summary>
     public class Game1 : Game
     {
-        
+        float enemySpawnTimer = 0;
+        float enemySpawnSpeed = 1f;
         Vector2 bgPosition = new Vector2(0, 0);
 
         static Dictionary<string, Texture2D> loadedTextures = new Dictionary<string, Texture2D>();
@@ -59,7 +60,6 @@ namespace Kevin_spicy_GAME
             
             base.Initialize();
 
-            EnemySpawn.SpawnEnemy(Window);
             player = new Player();
 
             IsMouseVisible = true;
@@ -84,7 +84,7 @@ namespace Kevin_spicy_GAME
 
             loadedTextures["Crosshair"] = Content.Load<Texture2D>("crosshair");
 
-            
+            loadedTextures["BulletGreen"] = Content.Load<Texture2D>("BulletGreen");
 
 
 
@@ -111,6 +111,8 @@ namespace Kevin_spicy_GAME
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+
+            enemySpawnTimer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (bgPosition.X > -11515)
             {
                 bgPosition += new Vector2(-25, 0);
@@ -134,17 +136,17 @@ namespace Kevin_spicy_GAME
                 e.Update(gameTime);
             }
 
+            if (enemySpawnTimer <= 0)
+            {
+                enemySpawnTimer = enemySpawnSpeed;
+                SpawnEnemeies();
+            }
             base.Update(gameTime);
         }
 
-        public void LoadEnemies()
+        public void SpawnEnemeies()
         {
-            int randY = random.Next(100, 400);
-
-            if (spawn >= 1)
-            {
-
-            }
+            EnemySpawn.SpawnEnemy(Window);
         }
 
 

@@ -96,13 +96,10 @@ namespace Kevin_spicy_GAME
 
             spaceshipRectangle.Location = (position - offset * scale).ToPoint();
 
-            if (keyboardState.IsKeyDown(Keys.Space))
+            if (keyboardState.IsKeyDown(Keys.Space) && attackSpeed >= attackInterval)
             {
-                if (attackSpeed >= attackInterval)
-                {
-                    attackSpeed = 0;
-                    Shoot();
-                }
+                attackSpeed = 0;
+                Shoot();
             }
         }
 
@@ -113,7 +110,7 @@ namespace Kevin_spicy_GAME
 
         public void Shoot()
         {
-            Game1.bullets.Add(new Bullet(position, bulletGreenTexture, 20, Vector2.One * 0.025f, spaceshipRectangle.Size.ToVector2() + new Vector2()));
+            Game1.bullets.Add(new Bullet(position, bulletGreenTexture, 20, Vector2.One * 0.025f, spaceshipRectangle.Size.ToVector2(), Vector2.UnitX));
         }
     }
 }
