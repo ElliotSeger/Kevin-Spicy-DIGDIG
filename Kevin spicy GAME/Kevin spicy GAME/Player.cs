@@ -7,12 +7,8 @@ namespace Kevin_spicy_GAME
     public class Player
     {
         Texture2D kevinSpaceshipTexture;
-<<<<<<< HEAD
         public Rectangle spaceshipRectangle;
         // lol
-=======
-        Rectangle spaceshipRectangle;
->>>>>>> db84768e64104151aa719958c3f090857190c1ed
         Vector2 position;
         Vector2 crosshairpos;
         Vector2 scale;
