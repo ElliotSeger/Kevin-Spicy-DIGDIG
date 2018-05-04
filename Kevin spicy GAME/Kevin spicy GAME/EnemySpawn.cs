@@ -10,11 +10,9 @@ using Microsoft.Xna.Framework.Input;
 namespace Kevin_spicy_GAME
 {
     class EnemySpawn
-    {
-        static Player player;
+    {  
         static Random random = new Random();
 
-        static int numEnemies;
         static List<Enemy> enemies = new List<Enemy>();
 
         public static List<Enemy> SpawnedEnemies
@@ -25,7 +23,8 @@ namespace Kevin_spicy_GAME
         public static void SpawnEnemy(GameWindow Window)
         {
             float randomY = random.Next(0, Window.ClientBounds.Height - 20);
-            enemies.Add(new Enemy(Game1.LoadedTextures["EnemyShip"], new Vector2(1900, randomY), 5, Vector2.One));
+            enemies.Add(new Enemy(Game1.LoadedTextures["EnemyShip"], new Vector2 (1900, randomY), 5, Vector2.One));
+           
         }
 
         public static void Draw(SpriteBatch spriteBatch)

@@ -7,11 +7,17 @@ namespace Kevin_spicy_GAME
     public class Player
     {
         Texture2D kevinSpaceshipTexture;
+<<<<<<< HEAD
         public Rectangle spaceshipRectangle;
         // lol
+=======
+        Rectangle spaceshipRectangle;
+>>>>>>> db84768e64104151aa719958c3f090857190c1ed
         Vector2 position;
+        Vector2 crosshairpos;
         Vector2 scale;
         Vector2 offset;
+        Vector2 mousepos;
         Color spaceshipColor;
 
         float health;
@@ -21,6 +27,7 @@ namespace Kevin_spicy_GAME
         float attackSpeed;
         float rotation;
         Texture2D bulletGreenTexture;
+        Texture2D crosshairTexture;
         private Texture2D texture2D;
         private Vector2 vector21;
         private int v1;
@@ -31,7 +38,9 @@ namespace Kevin_spicy_GAME
         public Player()
         {
             kevinSpaceshipTexture = Game1.LoadedTextures["Ship"];
+
             position = new Vector2(0, 450);
+            crosshairpos = new Vector2(1750, 430);
             speed = 300;
             health = 100.0f;
             attackInterval = 0.2f;
@@ -43,6 +52,7 @@ namespace Kevin_spicy_GAME
             offset = (kevinSpaceshipTexture.Bounds.Size.ToVector2() * 0.5f) * scale;
             spaceshipRectangle = new Rectangle((position - offset).ToPoint(), (kevinSpaceshipTexture.Bounds.Size.ToVector2() * scale).ToPoint());
             bulletGreenTexture = Game1.LoadedTextures["Bullet"];
+            crosshairTexture = Game1.LoadedTextures["Crosshair"];
         }
 
         public Player(Texture2D texture2D, Vector2 vector21, int v1, Vector2 vector22, int v2, Color white)
@@ -81,6 +91,15 @@ namespace Kevin_spicy_GAME
             {
                 position += (-Vector2.UnitY * speed * deltaTime * 2);
             }
+            //crosshair movement
+            if (keyboardState.IsKeyDown(Keys.S))
+            {
+                crosshairpos += (Vector2.UnitY * speed * deltaTime * 2);
+            }
+            if (keyboardState.IsKeyDown(Keys.W))
+            {
+                crosshairpos += (-Vector2.UnitY * speed * deltaTime * 2);
+            }
 
             if (position.X <= 40)
             {
@@ -90,9 +109,9 @@ namespace Kevin_spicy_GAME
             {
                 position.X = (window.ClientBounds.Width - kevinSpaceshipTexture.Width * scale.X);
             }
-            if (position.Y <= 10)
+            if (position.Y <= -35)
             {
-                position.Y = 10;
+                position.Y = -35;
             }
             if (position.Y >= (window.ClientBounds.Height - kevinSpaceshipTexture.Height * scale.Y))
             {
@@ -111,7 +130,10 @@ namespace Kevin_spicy_GAME
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(kevinSpaceshipTexture, position, null, spaceshipColor, rotation, offset, scale, SpriteEffects.None, 0);
+
+            spriteBatch.Draw(crosshairTexture, crosshairpos, null, spaceshipColor, rotation, offset, scale, SpriteEffects.None, 0);
         }
+       
 
         public void Shoot()
         {
