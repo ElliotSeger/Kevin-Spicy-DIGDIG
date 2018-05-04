@@ -36,7 +36,6 @@ C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy 
 C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\Bullet.xnb
 C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\EnemyShip.xnb
 C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\KEVINspace.xnb
-C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\KEvinsShip.xnb
 C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Kevin spicy GAME.exe
 C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Kevin spicy GAME.pdb
 C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll
@@ -64,3 +63,7 @@ C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kev
 C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\KEvins ship.xnb
 C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\crosshair.xnb
 C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\BulletGreen.xnb
+C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\crosshair.xnb
+C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\KEvins ship.xnb
+C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\SpaceWallpaper.xnb
+C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\BulletGreen.xnb

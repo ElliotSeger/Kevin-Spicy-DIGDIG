@@ -4,15 +4,18 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Kevin_spicy_GAME
 {
-    class Player
+    public class Player
     {
         Texture2D kevinSpaceshipTexture;
-        Rectangle spaceshipRectangle;
+        public Rectangle spaceshipRectangle;
         // lol
         Vector2 position;
         Vector2 scale;
         Vector2 offset;
         Color spaceshipColor;
+
+        float health;
+        float playerDamage;
         float speed;
         float attackInterval;
         float attackSpeed;
@@ -30,9 +33,11 @@ namespace Kevin_spicy_GAME
             kevinSpaceshipTexture = Game1.LoadedTextures["Ship"];
             position = new Vector2(0, 450);
             speed = 300;
+            health = 100.0f;
             attackInterval = 0.2f;
             rotation = 0;
             scale = new Vector2(0.3f, 0.3f);
+            playerDamage = 10.0f;
             attackSpeed = 100;
             spaceshipColor = Color.White;
             offset = (kevinSpaceshipTexture.Bounds.Size.ToVector2() * 0.5f) * scale;
@@ -110,7 +115,16 @@ namespace Kevin_spicy_GAME
 
         public void Shoot()
         {
-            Game1.bullets.Add(new Bullet(position, bulletGreenTexture, 20, Vector2.One * 0.025f, spaceshipRectangle.Size.ToVector2(), Vector2.UnitX));
+            Game1.bullets.Add(new Bullet(position, bulletGreenTexture, 20, Vector2.One * 0.025f, spaceshipRectangle.Size.ToVector2(), Vector2.UnitX, playerDamage, typeof(Player)));
+        }
+
+        public void TakeDamage(float amount)
+        {
+            health -= amount;
+            if (health <= 0)
+            {
+                Game1.player = null;
+            }
         }
     }
 }

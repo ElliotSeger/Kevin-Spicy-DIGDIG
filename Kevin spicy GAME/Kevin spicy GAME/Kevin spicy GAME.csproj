@@ -44,7 +44,6 @@
   <ItemGroup>
     <Compile Include="Background.cs" />
     <Compile Include="Bullet.cs" />
-    <Compile Include="Damage.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="EnemySpawn.cs" />
     <Compile Include="Game1.cs" />

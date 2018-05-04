@@ -27,7 +27,7 @@ namespace Kevin_spicy_GAME
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         
-        Player player;
+        public static Player player;
 
         //Game World
         // List<Enemies> enemies = new List<Enemies>();
@@ -125,10 +125,10 @@ namespace Kevin_spicy_GAME
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            player.Update(gameTime, Window);
-            foreach (Bullet bullet in bullets)
+            player?.Update(gameTime, Window);
+            for(int i = 0; i < bullets.Count; i++)
             {
-                bullet.Update(gameTime);
+                bullets[i].Update(gameTime, player);
             }
 
             foreach(Enemy e in EnemySpawn.SpawnedEnemies)
@@ -162,7 +162,7 @@ namespace Kevin_spicy_GAME
             spriteBatch.Begin();
             spriteBatch.Draw(LoadedTextures["SpaceWallpaper"], bgPosition, Color.White);
             EnemySpawn.Draw(spriteBatch);
-            player.Draw(spriteBatch);
+            player?.Draw(spriteBatch);
             foreach (Bullet bullet in bullets)
             {
                 bullet.Draw(spriteBatch);

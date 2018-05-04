@@ -8,5 +8,6 @@ namespace Kevin_spicy_GAME
 {
     class HUD
     {
+
     }
 }
