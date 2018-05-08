@@ -13,9 +13,10 @@ namespace Kevin_spicy_GAME
     /// </summary>
     public class Game1 : Game
     {
-        SpriteFont font;
         float enemySpawnTimer = 0;
         float enemySpawnSpeed = 1f;
+        public static float Health { get; set; } = 100.0f;
+        public static int Points { get; set; } = 0;
         public static int Ammo { get; set; } = 30;
         Vector2 bgPosition = new Vector2(0, 0);
 
@@ -65,7 +66,7 @@ namespace Kevin_spicy_GAME
 
             player = new Player();
 
-            IsMouseVisible = true;
+            IsMouseVisible = false;
         }
 
         /// <summary>
@@ -157,7 +158,7 @@ namespace Kevin_spicy_GAME
 
 
         /// <summary>
-        /// This is called when the game should draw itself.
+        /// This is called when the game should draw itself.5
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
@@ -174,6 +175,11 @@ namespace Kevin_spicy_GAME
                 bullet.Draw(spriteBatch);
                 
             }
+            spriteBatch.DrawString(font, Ammo.ToString(), new Vector2(1650, 900), Color.Blue);
+
+            spriteBatch.DrawString(font, Health.ToString(), new Vector2(500, 500), Color.Blue);
+
+            spriteBatch.DrawString(font, Points.ToString(), new Vector2(500, 900), Color.Blue);
             
             spriteBatch.DrawString(loadedFonts["Betong"], Ammo.ToString(), new Vector2(1630, 815), Color.Blue);
             spriteBatch.End();
