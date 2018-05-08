@@ -8,7 +8,6 @@ namespace Kevin_spicy_GAME
     {
         Texture2D kevinSpaceshipTexture;
         public Rectangle spaceshipRectangle;
-        // lol
         Vector2 position;
         Vector2 crosshairpos;
         Vector2 scale;
