@@ -109,10 +109,10 @@
 /processorParam:TextureFormat=Color
 /build:HUD.png
 
-#begin Font.spritefont
+#begin Betong.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
-/build:Font.spritefont
+/build:Betong.spritefont
 
