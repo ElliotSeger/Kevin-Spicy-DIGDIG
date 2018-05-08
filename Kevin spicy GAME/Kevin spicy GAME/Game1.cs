@@ -175,19 +175,11 @@ namespace Kevin_spicy_GAME
                 bullet.Draw(spriteBatch);
                 
             }
-<<<<<<< HEAD
 
             spriteBatch.DrawString(loadedFonts["Betong"], Health.ToString(), new Vector2(200, 825), Color.Blue);
 
             spriteBatch.DrawString(loadedFonts["Betong"], Points.ToString(), new Vector2(900, 900), Color.Blue);
-=======
-            spriteBatch.DrawString(font, Ammo.ToString(), new Vector2(1650, 900), Color.Blue);
 
-            spriteBatch.DrawString(font, Health.ToString(), new Vector2(500, 500), Color.Blue);
-
-            spriteBatch.DrawString(font, Points.ToString(), new Vector2(500, 900), Color.Blue);
->>>>>>> 01397f26e65515100dcb49a2d316f7937eb99bd5
-            
             spriteBatch.DrawString(loadedFonts["Betong"], Ammo.ToString(), new Vector2(1630, 815), Color.Blue);
 
             spriteBatch.End();
