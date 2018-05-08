@@ -12,9 +12,10 @@ namespace Kevin_spicy_GAME
         Vector2 crosshairpos;
         Vector2 scale;
         Vector2 offset;
-        Vector2 mousepos;
+        Vector2 hudpos;
+        Vector2 hudScale;
         Color spaceshipColor;
-
+        Texture2D hudTexture;
         float health;
         float playerDamage;
         float speed;
@@ -35,19 +36,23 @@ namespace Kevin_spicy_GAME
             kevinSpaceshipTexture = Game1.LoadedTextures["Ship"];
 
             position = new Vector2(0, 450);
-            crosshairpos = new Vector2(1750, 430);
+            crosshairpos = new Vector2(1750, 437);
+            hudpos = new Vector2 (50, 25);
+            hudScale = new Vector2(1f, 1.2f);
             speed = 300;
             health = 100.0f;
             attackInterval = 0.2f;
             rotation = 0;
             scale = new Vector2(0.3f, 0.3f);
-            playerDamage = 10.0f;
+            playerDamage = 50.0f;
             attackSpeed = 100;
             spaceshipColor = Color.White;
             offset = (kevinSpaceshipTexture.Bounds.Size.ToVector2() * 0.5f) * scale;
             spaceshipRectangle = new Rectangle((position - offset).ToPoint(), (kevinSpaceshipTexture.Bounds.Size.ToVector2() * scale).ToPoint());
+            hudTexture = Game1.LoadedTextures["HUD"];
             bulletGreenTexture = Game1.LoadedTextures["Bullet"];
             crosshairTexture = Game1.LoadedTextures["Crosshair"];
+           
         }
 
         public Player(Texture2D texture2D, Vector2 vector21, int v1, Vector2 vector22, int v2, Color white)
@@ -80,22 +85,18 @@ namespace Kevin_spicy_GAME
             }
             if (keyboardState.IsKeyDown(Keys.S))
             {
-                position += (Vector2.UnitY * speed * deltaTime * 2);
+                position += (Vector2.UnitY * speed * deltaTime * 3);
             }
             if (keyboardState.IsKeyDown(Keys.W))
             {
-                position += (-Vector2.UnitY * speed * deltaTime * 2);
-            }
-            //crosshair movement
-            if (keyboardState.IsKeyDown(Keys.S))
-            {
-                crosshairpos += (Vector2.UnitY * speed * deltaTime * 2);
-            }
-            if (keyboardState.IsKeyDown(Keys.W))
-            {
-                crosshairpos += (-Vector2.UnitY * speed * deltaTime * 2);
+                position += (-Vector2.UnitY * speed * deltaTime * 3);
             }
 
+            //bounds
+            // crosshair
+            crosshairpos = Vector2.Lerp(crosshairpos, new Vector2(1600, position.Y), 0.07f);
+
+            //player
             if (position.X <= 40)
             {
                 position.X = 40;
@@ -104,13 +105,13 @@ namespace Kevin_spicy_GAME
             {
                 position.X = (window.ClientBounds.Width - kevinSpaceshipTexture.Width * scale.X);
             }
-            if (position.Y <= -35)
+            if (position.Y <= 75)
             {
-                position.Y = -35;
+                position.Y = 75;
             }
-            if (position.Y >= (window.ClientBounds.Height - kevinSpaceshipTexture.Height * scale.Y))
+            if (position.Y >= (window.ClientBounds.Height - kevinSpaceshipTexture.Height * scale.Y - 145))
             {
-                position.Y = (window.ClientBounds.Height - kevinSpaceshipTexture.Height * scale.Y);
+                position.Y = (window.ClientBounds.Height - kevinSpaceshipTexture.Height * scale.Y - 145);
             }
 
             spaceshipRectangle.Location = (position - offset * scale).ToPoint();
@@ -127,11 +128,14 @@ namespace Kevin_spicy_GAME
             spriteBatch.Draw(kevinSpaceshipTexture, position, null, spaceshipColor, rotation, offset, scale, SpriteEffects.None, 0);
 
             spriteBatch.Draw(crosshairTexture, crosshairpos, null, spaceshipColor, rotation, offset, scale, SpriteEffects.None, 0);
+
+            spriteBatch.Draw(hudTexture, hudpos, null, spaceshipColor, rotation, offset, hudScale, SpriteEffects.None, 0);
         }
        
 
         public void Shoot()
         {
+            Game1.Ammo--;
             Game1.bullets.Add(new Bullet(position, bulletGreenTexture, 20, Vector2.One * 0.025f, spaceshipRectangle.Size.ToVector2(), Vector2.UnitX, playerDamage, typeof(Player)));
         }
 

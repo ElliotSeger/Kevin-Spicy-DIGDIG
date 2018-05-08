@@ -23,6 +23,7 @@ namespace Kevin_spicy_GAME
         public static void SpawnEnemy(GameWindow Window)
         {
             float randomY = random.Next(0, Window.ClientBounds.Height - 20);
+            float randomY = random.Next(80, Window.ClientBounds.Height - 240);
             enemies.Add(new Enemy(Game1.LoadedTextures["EnemyShip"], new Vector2 (1900, randomY), 5, Vector2.One));
            
         }

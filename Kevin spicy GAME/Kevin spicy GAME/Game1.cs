@@ -13,8 +13,10 @@ namespace Kevin_spicy_GAME
     /// </summary>
     public class Game1 : Game
     {
+        SpriteFont font;
         float enemySpawnTimer = 0;
         float enemySpawnSpeed = 1f;
+        public static int Ammo { get; set; } = 100;
         Vector2 bgPosition = new Vector2(0, 0);
 
         static Dictionary<string, Texture2D> loadedTextures = new Dictionary<string, Texture2D>();
@@ -85,6 +87,10 @@ namespace Kevin_spicy_GAME
             loadedTextures["Crosshair"] = Content.Load<Texture2D>("crosshair");
 
             loadedTextures["BulletGreen"] = Content.Load<Texture2D>("BulletGreen");
+
+            loadedTextures["HUD"] = Content.Load<Texture2D>("HUD");
+
+            font = Content.Load<SpriteFont>("font");
 
 
 
@@ -168,6 +174,7 @@ namespace Kevin_spicy_GAME
                 bullet.Draw(spriteBatch);
                // crosshair.draw(spriteBatch);
             }
+            spriteBatch.DrawString(font, Ammo.ToString(), new Vector2(1650, 900), Color.Blue);
             spriteBatch.End();
 
             base.Draw(gameTime);
