@@ -68,6 +68,10 @@ C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy 
 C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\SpaceWallpaper.xnb
 C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\BulletGreen.xnb
 C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\HUD.xnb
+<<<<<<< HEAD
+C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\Betong.xnb
+=======
 C:\Users\noah.lundqvist\Documents\GitHub\Kevin-Spicy-DIGDIG\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\Font.xnb
 C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\Font.xnb
 C:\Users\elliot.seger\Documents\GitHub\Kevin-Spicy\Kevin spicy GAME\Kevin spicy GAME\bin\DesktopGL\AnyCPU\Debug\Content\HUD.xnb
+>>>>>>> e5d3ac21feb561b2e01b48fb6dca8b312696424b

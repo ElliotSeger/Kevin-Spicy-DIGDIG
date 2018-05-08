@@ -135,8 +135,15 @@ namespace Kevin_spicy_GAME
 
         public void Shoot()
         {
-            Game1.Ammo--;
-            Game1.bullets.Add(new Bullet(position, bulletGreenTexture, 20, Vector2.One * 0.025f, spaceshipRectangle.Size.ToVector2(), Vector2.UnitX, playerDamage, typeof(Player)));
+            if (Game1.Ammo >= 1)
+            {
+                Game1.Ammo--;
+                Game1.bullets.Add(new Bullet(position, bulletGreenTexture, 20, Vector2.One * 0.025f, spaceshipRectangle.Size.ToVector2(), Vector2.UnitX, playerDamage, typeof(Player)));
+            }
+            else
+            {
+                Game1.Ammo = 0;
+            }
         }
 
         public void TakeDamage(float amount)

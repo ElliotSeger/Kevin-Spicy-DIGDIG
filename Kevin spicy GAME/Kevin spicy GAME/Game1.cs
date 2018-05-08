@@ -16,11 +16,16 @@ namespace Kevin_spicy_GAME
         SpriteFont font;
         float enemySpawnTimer = 0;
         float enemySpawnSpeed = 1f;
+<<<<<<< HEAD
         public static int Ammo { get; set; } = 100;
         public static float Health { get; set; } = 100.0f;
         public static int Points { get; set; } = 0;
+=======
+        public static int Ammo { get; set; } = 30;
+>>>>>>> 0168246d05c422f755d10e2cc8113e62156f2b4f
         Vector2 bgPosition = new Vector2(0, 0);
 
+        static Dictionary<string, SpriteFont> loadedFonts = new Dictionary<string, SpriteFont>();
         static Dictionary<string, Texture2D> loadedTextures = new Dictionary<string, Texture2D>();
 
         public static Dictionary<string, Texture2D> LoadedTextures
@@ -92,12 +97,11 @@ namespace Kevin_spicy_GAME
 
             loadedTextures["HUD"] = Content.Load<Texture2D>("HUD");
 
-            font = Content.Load<SpriteFont>("font");
+            loadedFonts["Betong"] = Content.Load<SpriteFont>("Betong");
 
 
 
-
-            // pointTexture = Content.Load<Texture2D>("point");
+            //pointTexture = Content.Load<Texture2D>("point");
             // TODO: use this.Content to load your game content here
         }
 
@@ -174,13 +178,18 @@ namespace Kevin_spicy_GAME
             foreach (Bullet bullet in bullets)
             {
                 bullet.Draw(spriteBatch);
-               // crosshair.draw(spriteBatch);
+                
             }
+<<<<<<< HEAD
             spriteBatch.DrawString(font, Ammo.ToString(), new Vector2(1650, 900), Color.Blue);
 
             spriteBatch.DrawString(font, Health.ToString(), new Vector2(500, 500), Color.Blue);
 
             spriteBatch.DrawString(font, Points.ToString(), new Vector2(500, 900), Color.Blue);
+=======
+            
+            spriteBatch.DrawString(loadedFonts["Betong"], Ammo.ToString(), new Vector2(1630, 815), Color.Blue);
+>>>>>>> 0168246d05c422f755d10e2cc8113e62156f2b4f
             spriteBatch.End();
 
             base.Draw(gameTime);

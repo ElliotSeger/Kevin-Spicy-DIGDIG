@@ -22,9 +22,9 @@ namespace Kevin_spicy_GAME
 
         public Bullet(Vector2 pos, Texture2D texture, float speed, Vector2 scale, Vector2 playerScale, Vector2 direction, float damage, Type shooterType)
         {
-            position = pos + playerScale * 0.26f;
+            position = pos + playerScale * 0.2555f;
             redBullet = texture;
-            bulletSpeed = speed;
+            bulletSpeed = speed * 1.5f;
             bulletScale = scale;
             collisionBoxBullet = new Rectangle(position.ToPoint(), bulletScale.ToPoint());
             bulletOffset = (texture.Bounds.Size.ToVector2() * 2f) * scale;
