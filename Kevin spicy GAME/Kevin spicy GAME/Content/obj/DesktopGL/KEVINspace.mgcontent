@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<<<<<<< HEAD
   <SourceFile>C:/Users/noah.lundqvist/Documents/GitHub/Kevin-Spicy-DIGDIG/Kevin spicy GAME/Kevin spicy GAME/Content/KEVINspace.png</SourceFile>
   <SourceTime>2018-04-13T12:44:26.1227289+02:00</SourceTime>
   <DestFile>C:/Users/noah.lundqvist/Documents/GitHub/Kevin-Spicy-DIGDIG/Kevin spicy GAME/Kevin spicy GAME/Content/bin/DesktopGL/KEVINspace.xnb</DestFile>
   <DestTime>2018-05-08T12:09:55.3356064+02:00</DestTime>
+=======
+  <SourceFile>C:/Users/elliot.seger/Documents/GitHub/Kevin-Spicy/Kevin spicy GAME/Kevin spicy GAME/Content/KEVINspace.png</SourceFile>
+  <SourceTime>2018-04-12T08:20:40.0141942+02:00</SourceTime>
+  <DestFile>C:/Users/elliot.seger/Documents/GitHub/Kevin-Spicy/Kevin spicy GAME/Kevin spicy GAME/Content/bin/DesktopGL/KEVINspace.xnb</DestFile>
+  <DestTime>2018-05-08T11:39:30.0042325+02:00</DestTime>
+>>>>>>> 01397f26e65515100dcb49a2d316f7937eb99bd5
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
