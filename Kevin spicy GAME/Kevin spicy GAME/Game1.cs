@@ -13,6 +13,7 @@ namespace Kevin_spicy_GAME
     /// </summary>
     public class Game1 : Game
     {
+        
         float enemySpawnTimer = 0;
         float enemySpawnSpeed = 1f;
         public static float Health { get; set; } = 100.0f;
@@ -109,7 +110,6 @@ namespace Kevin_spicy_GAME
             // TODO: Unload any non ContentManager content here
         }
 
-        float spawn = 0;
 
         /// <summary>
         /// Allows the game to run logic such as updating the world,
@@ -175,13 +175,13 @@ namespace Kevin_spicy_GAME
                 bullet.Draw(spriteBatch);
                 
             }
-            spriteBatch.DrawString(font, Ammo.ToString(), new Vector2(1650, 900), Color.Blue);
 
-            spriteBatch.DrawString(font, Health.ToString(), new Vector2(500, 500), Color.Blue);
+            spriteBatch.DrawString(loadedFonts["Betong"], Health.ToString(), new Vector2(200, 825), Color.Blue);
 
-            spriteBatch.DrawString(font, Points.ToString(), new Vector2(500, 900), Color.Blue);
+            spriteBatch.DrawString(loadedFonts["Betong"], Points.ToString(), new Vector2(900, 900), Color.Blue);
             
             spriteBatch.DrawString(loadedFonts["Betong"], Ammo.ToString(), new Vector2(1630, 815), Color.Blue);
+
             spriteBatch.End();
 
             base.Draw(gameTime);
