@@ -142,6 +142,7 @@ namespace Kevin_spicy_GAME
         public void TakeDamage(float amount)
         {
             health -= amount;
+            Game1.Health-=5.0f;
             if (health <= 0)
             {
                 Game1.player = null;

@@ -17,6 +17,8 @@ namespace Kevin_spicy_GAME
         float enemySpawnTimer = 0;
         float enemySpawnSpeed = 1f;
         public static int Ammo { get; set; } = 100;
+        public static float Health { get; set; } = 100.0f;
+        public static int Points { get; set; } = 0;
         Vector2 bgPosition = new Vector2(0, 0);
 
         static Dictionary<string, Texture2D> loadedTextures = new Dictionary<string, Texture2D>();
@@ -64,7 +66,7 @@ namespace Kevin_spicy_GAME
 
             player = new Player();
 
-            IsMouseVisible = true;
+            IsMouseVisible = false;
         }
 
         /// <summary>
@@ -157,7 +159,7 @@ namespace Kevin_spicy_GAME
 
 
         /// <summary>
-        /// This is called when the game should draw itself.
+        /// This is called when the game should draw itself.5
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
@@ -175,6 +177,10 @@ namespace Kevin_spicy_GAME
                // crosshair.draw(spriteBatch);
             }
             spriteBatch.DrawString(font, Ammo.ToString(), new Vector2(1650, 900), Color.Blue);
+
+            spriteBatch.DrawString(font, Health.ToString(), new Vector2(500, 500), Color.Blue);
+
+            spriteBatch.DrawString(font, Points.ToString(), new Vector2(500, 900), Color.Blue);
             spriteBatch.End();
 
             base.Draw(gameTime);

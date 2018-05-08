@@ -17,30 +17,30 @@ namespace Kevin_spicy_GAME
 
         private float health;
         public Texture2D _texure { get; set; }
-        Vector2 _position;
-        Vector2 _scale;
-        Vector2 _offset;
-        Rectangle _rectangle;
+        Vector2 position;
+        Vector2 scale;
+        Vector2 offset;
+        Rectangle rectangle;
         private float enemyDamage;
 
         public Rectangle EnemyRectangle
         {
-            get { return _rectangle; }
+            get { return rectangle; }
         }
         float speed;
         Color color;
        
-        public Enemy(Texture2D texture, Vector2 startPosition, float theEnemySpeed, Vector2 enemyScale)
+        public Enemy(Texture2D texture, Vector2 startPosition, float enemySpeed, Vector2 enemyScale)
         {
-            _position = startPosition;
-            _offset = Game1.LoadedTextures["EnemyShip"].Bounds.Size.ToVector2() * 0.5f;
-            _scale = enemyScale;
-            _rectangle = new Rectangle((startPosition - _offset).ToPoint(), (Game1.LoadedTextures["EnemyShip"].Bounds.Size.ToVector2() * _scale).ToPoint());
-            _rectangle.Size = new Point(100);
+            position = startPosition;
+            offset = Game1.LoadedTextures["EnemyShip"].Bounds.Size.ToVector2() * 0.5f;
+            scale = enemyScale;
+            rectangle = new Rectangle((startPosition - offset).ToPoint(), (Game1.LoadedTextures["EnemyShip"].Bounds.Size.ToVector2() * scale).ToPoint());
+            rectangle.Size = new Point(100);
             enemyDamage = 5.0f;
             health = 50.0f;
             color = Color.White;
-            speed = theEnemySpeed;
+            speed = enemySpeed;
             bulletGreenTexture = Game1.LoadedTextures["BulletGreen"];
         }
 
@@ -54,13 +54,13 @@ namespace Kevin_spicy_GAME
                 attackTimer = attackSpeed;
             }
 
-            _position += new Vector2(-1, 0) * speed;
-            _rectangle.Location = _position.ToPoint();
+            position += new Vector2(-1, 0) * speed;
+            rectangle.Location = position.ToPoint();
         }
 
         public void Shoot()
         {
-            Game1.bullets.Add(new Bullet(_position, bulletGreenTexture, 20, Vector2.One * 0.025f, _rectangle.Size.ToVector2(), -Vector2.UnitX, enemyDamage, typeof(Enemy)));
+            Game1.bullets.Add(new Bullet(position, bulletGreenTexture, 20, Vector2.One * 0.025f, rectangle.Size.ToVector2(), -Vector2.UnitX, enemyDamage, typeof(Enemy)));
         }
 
         public void TakeDamage(float amount)
@@ -68,6 +68,7 @@ namespace Kevin_spicy_GAME
             health -= amount;
             if (health <= 0)
             {
+                Game1.Points+=100;
                 EnemySpawn.SpawnedEnemies.Remove(this);
             }
         }
